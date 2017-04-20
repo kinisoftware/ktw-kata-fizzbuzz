@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/Users/jengelmo/Documents/Dev/Workspace/KwtFizzBuzz/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="504ac2ff338df98b2989a6b0456773587af20469">
-        <dex dex="/Users/jengelmo/Documents/Dev/Workspace/KwtFizzBuzz/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5122465ee50da20bb9eff75d0f468f0f2ba011f0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/jengelmo/Documents/Dev/Workspace/KwtFizzBuzz/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/jengelmo/Documents/Dev/KarumiTestingWorkshop/ktw-kata-fizzbuzz/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="/Users/jengelmo/Documents/Dev/Workspace/KwtFizzBuzz/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_dddebc01ba58c6697d68399bf6691593d666af18/classes.dex" />
+        <dex dex="/Users/jengelmo/Documents/Dev/KarumiTestingWorkshop/ktw-kata-fizzbuzz/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_6e49d0840ec51ce5b908674752d13c07917904fe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jengelmo/Documents/Dev/KarumiTestingWorkshop/ktw-kata-fizzbuzz/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="05b6f7277e3916bfc796bd3b44eb7573cc505030">
+        <dex dex="/Users/jengelmo/Documents/Dev/KarumiTestingWorkshop/ktw-kata-fizzbuzz/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_748385a5f939edc637cabaa24148e9c949bd1238/classes.dex" />
     </item>
 
 </items>
