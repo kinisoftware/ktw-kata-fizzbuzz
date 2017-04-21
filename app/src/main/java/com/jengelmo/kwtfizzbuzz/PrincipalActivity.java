@@ -24,7 +24,7 @@ public class PrincipalActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
-        sessionApiClient = new SessionApiClient();
+        sessionApiClient = new SessionApiClient(new SessionApiClient.FakeExecutor());
 
         tvUsername = (TextView) findViewById(R.id.tvUsername);
         tvPassword = (TextView) findViewById(R.id.tvPassword);
