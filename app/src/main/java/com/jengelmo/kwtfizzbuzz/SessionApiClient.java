@@ -3,9 +3,11 @@ package com.jengelmo.kwtfizzbuzz;
 public class SessionApiClient {
 
     private final Executor executor;
+    private final Clock clock;
 
-    public SessionApiClient(Executor executor) {
+    public SessionApiClient(Executor executor, Clock clock) {
         this.executor = executor;
+        this.clock = clock;
     }
 
     public void login(final String username, final String pass, final LogInCallback logInCallback) {
@@ -21,17 +23,21 @@ public class SessionApiClient {
         });
     }
 
-    public void logout(final LogOutnCallback logOutnCallback) {
+    public void logout(final LogOutCallback logOutCallback) {
         executor.execute(new Runnable() {
             @Override
             public void run() {
-                if (System.currentTimeMillis() % 2 == 0) {
-                    logOutnCallback.onSuccess();
+                if (clock.getTime() % 2 == 0) {
+                    logOutCallback.onSuccess();
                 } else {
-                    logOutnCallback.onError();
+                    logOutCallback.onError();
                 }
             }
         });
+    }
+
+    interface Clock {
+        long getTime();
     }
 
     interface Executor {
@@ -45,17 +51,17 @@ public class SessionApiClient {
     }
 
 
-    interface LogOutnCallback {
+    interface LogOutCallback {
         void onSuccess();
 
         void onError();
     }
 
     static class FakeExecutor implements Executor {
-
         @Override
         public void execute(Runnable runnable) {
             runnable.run();
         }
     }
+
 }

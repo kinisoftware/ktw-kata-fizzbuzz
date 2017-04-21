@@ -24,7 +24,7 @@ public class PrincipalActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
-        sessionApiClient = new SessionApiClient(new SessionApiClient.FakeExecutor());
+        sessionApiClient = new SessionApiClient(new ThreadExecutor(), new SystemClock());
 
         tvUsername = (TextView) findViewById(R.id.tvUsername);
         tvPassword = (TextView) findViewById(R.id.tvPassword);
@@ -70,7 +70,7 @@ public class PrincipalActivity extends Activity {
     }
 
     private void logout() {
-        sessionApiClient.logout(new SessionApiClient.LogOutnCallback() {
+        sessionApiClient.logout(new SessionApiClient.LogOutCallback() {
             @Override
             public void onSuccess() {
                 tvUsername.setVisibility(View.VISIBLE);
